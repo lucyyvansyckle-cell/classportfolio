@@ -3,43 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucy Van Syckle</title>
+    <meta name="author" content="Lucy Van Syckle">
+    <meta name="description"
+          content="Explore Lucy Van Syckle's cybersecurity experience, technical projects, and interest in building trustworthy technology.">
+    <title>Lucy Van Syckle | Cybersecurity Portfolio</title>
 </head>
 <body>
-    <header>
-        <a href="">Logo Placeholder</a>
-        <nav>
+    <header id="top">
+        <a href="#intro" aria-label="Lucy Van Syckle home">
+            <strong>LVS</strong> | Lucy Van Syckle
+        </a>
+
+        <nav aria-label="Main navigation">
             <ul>
-                <li><a href=#about>About</a></li>
-                <li><a href=#projects>Projects</a></li>
-                <li><a href=#contacts>Contacts</a></li>
-            </ul> 
+                <li><a href="#intro">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
-    <main>
-        <section>
-            <h1></h1>
+
+    <main id="main-content">
+        <section id="intro" aria-labelledby="intro-heading">
+            <h1 id="intro-heading">Hi, I'm Lucy Van Syckle.</h1>
+            <p>
+                I'm an Information Science student at Michigan State
+                University with experience in cybersecurity, technical
+                research, and Agile teamwork.
+            </p>
+            <p>
+                I'm interested in how technology earns our trust—and
+                how we can make it more secure.
+            </p>
+
+            <figure>
+                <img src="lucy.jpg" alt="Portrait of Lucy Van Syckle" width="300">
+                <figcaption>
+                    Student, cybersecurity professional in progress,
+                    and curious problem solver.
+                </figcaption>
+            </figure>
+
+            <p><a href="#projects">Explore my work</a></p>
         </section>
-        <section id="about">
-        <h2>About</h2>
-        <p></p>
+
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Me</h2>
+            <p>
+                Cybersecurity interests me because it combines technical
+                problem solving with decisions that affect real people.
+                I want to understand how a system works, where it could
+                fail, and how to explain those risks clearly.
+            </p>
+            <p>
+                During two internships at General Dynamics Land Systems,
+                I explored security technologies, tested solutions, and
+                communicated findings to technical teams and stakeholders.
+                I also served as Scrum Master for a cybersecurity team
+                developing a Zero Trust product.
+            </p>
+            <p>
+                Those experiences helped me see how much security work
+                depends on collaboration. A useful recommendation needs
+                clear evidence, and a team needs shared priorities to
+                turn that recommendation into a working solution.
+            </p>
+
+            <h3>What I'm Building On</h3>
+            <ul>
+                <li>Cybersecurity research and technical documentation</li>
+                <li>Agile planning and Scrum facilitation</li>
+                <li>Linux and virtual machine testing</li>
+                <li>Python, Git, and HTML</li>
+                <li>CompTIA Security+ exam preparation</li>
+            </ul>
+
+            <p>
+                Learn more about
+                <a href="https://msu.edu/">Michigan State University</a>.
+            </p>
         </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <article>
-                <h3></h3>
-                <p3></p3>
+
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects and Experience</h2>
+            <p>
+                These summaries describe my contributions and learning
+                without sharing internal code or sensitive project details.
+            </p>
+
+            <article aria-labelledby="firewall-heading">
+                <h3 id="firewall-heading">Firewall Evaluation</h3>
+                <p>
+                    I contributed to a build-versus-buy analysis of two
+                    firewall vendors during my 2026 cybersecurity internship.
+                    I tested configurations in an offline virtual machine
+                    and presented technical findings to stakeholders.
+                </p>
+                <ul>
+                    <li>Compared two possible security solutions.</li>
+                    <li>Tested configurations in an isolated environment.</li>
+                    <li>Explained findings to support a selection decision.</li>
+                </ul>
+                <p>
+                    <strong>Outcome:</strong> The recommended solution
+                    was selected for integration into the final product.
+                </p>
+                <p>
+                    <strong>What I learned:</strong> Testing provides
+                    the evidence needed to make a technical recommendation
+                    useful to decision makers.
+                </p>
+            </article>
+
+            <article aria-labelledby="pqc-heading">
+                <h3 id="pqc-heading">Post-Quantum Cryptography Research</h3>
+                <p>
+                    During my 2025 internship, I researched
+                    <abbr title="Post-Quantum Cryptography">PQC</abbr>
+                    and contributed to a whitepaper. I also built a
+                    C++ and Rust prototype that simulated a
+                    PQC-encrypted Diffie-Hellman exchange between
+                    two Linux virtual machines.
+                </p>
+                <ul>
+                    <li>Researched emerging cryptographic approaches.</li>
+                    <li>Documented findings in Confluence.</li>
+                    <li>Presented research and recommendations to the team.</li>
+                </ul>
+                <p>
+                    <strong>What I learned:</strong> Prototyping helped
+                    me connect abstract cryptography concepts to the
+                    practical challenges of implementing a system.
+                </p>
+            </article>
+
+            <article aria-labelledby="scrum-heading">
+                <h3 id="scrum-heading">Zero Trust Team Collaboration</h3>
+                <p>
+                    I served as Scrum Master for a cybersecurity team
+                    developing a Zero Trust product. My work focused
+                    on helping the team organize priorities and
+                    translate security requirements into actionable tasks.
+                </p>
+                <ul>
+                    <li>Facilitated sprint planning and daily stand-ups.</li>
+                    <li>Supported backlog refinement and retrospectives.</li>
+                    <li>Helped define user stories and acceptance criteria.</li>
+                </ul>
+                <p>
+                    <strong>What I learned:</strong> Clear requirements
+                    and regular communication help a team identify
+                    obstacles and keep work moving.
+                </p>
             </article>
         </section>
-        <section id="contacts">
-            <h2>Contact</h2>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Let's Connect</h2>
+            <p>
+                I'm interested in early-career cybersecurity opportunities
+                where I can investigate problems, learn from experienced
+                teammates, and contribute to more secure systems.
+            </p>
+
             <address>
-                <p>vanlucy2@msu.edu</p>
+                <p>
+                    Email:
+                    <a href="mailto:vanlucy2@msu.edu">
+                        vanlucy2@msu.edu
+                    </a>
+                </p>
             </address>
         </section>
     </main>
+
     <footer>
-        <p></p>
+        <p>
+            <small>&copy; 2026 Lucy Van Syckle.</small>
+        </p>
+        <p><a href="#top">Back to top</a></p>
     </footer>
 </body>
 </html>
