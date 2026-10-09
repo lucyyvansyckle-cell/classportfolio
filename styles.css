@@ -1,0 +1,157 @@
+/* 1. Five reusable CSS variables */
+:root {
+    --background: #b675df;
+    --surface: #ffffff;
+    --text: #000000;
+    --accent: #660bc6;
+    --border: #e48f80;
+}
+
+/* 2. Overall page */
+body {
+    margin: 0;
+    background-color: var(--background);
+    color: var(--text);
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* 3. Page header */
+header {
+    background-color: var(--accent);
+    color: var(--surface);
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* 4. Name link in the header */
+header > a {
+    color: var(--surface);
+    text-decoration: none;
+}
+
+/* 5. Navigation area */
+nav {
+    padding: 15px;
+    background-color: var(--surface);
+    text-align: center;
+}
+
+/* 6. Navigation list */
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* 7. Navigation items */
+nav li {
+    display: inline-block;
+    margin: 5px 12px;
+}
+
+/* 8. Navigation links */
+nav a {
+    color: var(--accent);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* 9. Main content */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 20px;
+}
+
+/* 10. Content sections */
+section {
+    background-color: var(--surface);
+    margin-bottom: 25px;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* 11. Main heading */
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+/* 12. Section headings */
+h2 {
+    color: var(--accent);
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+
+/* 13. Smaller headings */
+h3 {
+    color: var(--accent);
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+/* 14. Paragraphs */
+p {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+/* 15. Links */
+a {
+    color: var(--accent);
+    text-underline-offset: 4px;
+}
+
+/* 16. Links when hovered */
+a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+/* 17. Images */
+img {
+    display: block;
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* 18. Lists */
+ul {
+    padding-left: 25px;
+}
+
+/* 19. List items */
+li {
+    margin-bottom: 8px;
+}
+
+/* 20. Intro section */
+#intro {
+    text-align: center;
+    border-top: 5px solid var(--accent);
+}
+
+/* 21. Individual projects */
+.project {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--accent);
+    background-color: var(--background);
+}
+
+/* 22. Footer */
+footer {
+    padding: 25px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
