@@ -148,6 +148,27 @@ li {
     border-left: 4px solid var(--accent);
     background-color: var(--background);
 }
+#projects {
+    display: grid;
+    grid-template-columns: repear(2, 1fr);
+    grid-template-rows: repeat(2, minmax(100px, auto));
+    gap: 1em;
+}
+
+#projects h2 {
+    grid-column: span 3 / span 3;
+}
+
+#projects article h3 {
+    font-size: 2em;
+}
+
+#projects article {
+    background: var(--secondary-bg);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
 
 /* 22. Footer */
 footer {
