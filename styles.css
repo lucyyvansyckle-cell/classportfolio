@@ -31,6 +31,11 @@ header > a {
     text-decoration: none;
 }
 
+main {
+    margin: 0 auto;
+    width: 80%;
+}
+
 /* 5. Navigation area */
 nav {
     padding: 15px;
@@ -77,7 +82,7 @@ section {
 
 /* 11. Main heading */
 h1 {
-    font-size: 2.5rem;
+    font-size: 1.3rem;
     line-height: 1.2;
     margin-bottom: 15px;
 }
@@ -148,27 +153,6 @@ li {
     border-left: 4px solid var(--accent);
     background-color: var(--background);
 }
-#projects {
-    display: grid;
-    grid-template-columns: repear(2, 1fr);
-    grid-template-rows: repeat(2, minmax(100px, auto));
-    gap: 1em;
-}
-
-#projects h2 {
-    grid-column: span 3 / span 3;
-}
-
-#projects article h3 {
-    font-size: 2em;
-}
-
-#projects article {
-    background: var(--secondary-bg);
-    padding: 1rem;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-}
 
 /* 22. Footer */
 footer {
@@ -176,3 +160,155 @@ footer {
     text-align: center;
     border-top: 1px solid var(--border);
 }
+
+/* AI prompt:
+Use Flexbox for the header and navigation. Use Grid for
+the projects section, whose direct children are an h2,
+an introductory paragraph, and three article.project cards.
+Make the heading and introductory paragraph span all columns.
+
+Start with a mobile layout containing one project column.
+Add three min-width breakpoints at 600px, 900px, and 1200px.
+Use two project columns at 900px and three at 1200px.
+Increase the main content width so the three-column layout
+has enough room.
+
+At 900px, use Grid to place the existing intro figure beside
+the intro heading and paragraphs without adding HTML wrappers.
+Keep images responsive and navigation able to wrap.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 12px;
+}
+
+section {
+    min-width: 0;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+nav {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 16px;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: inline-block;
+    padding: 6px 0;
+}
+
+#intro figure {
+    margin: 20px 0;
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+}
+
+#projects > h2,
+#projects > p {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+#projects > .project {
+    min-width: 0;
+    margin-bottom: 0;
+}
+
+#projects article h3 {
+    font-size: 1.3rem;
+    overflow-wrap: anywhere;
+}
+
+#contact a {
+    overflow-wrap: anywhere;
+}
+
+@media (min-width: 600px) {
+    main {
+        padding: 25px;
+    }
+
+    section {
+        padding: 30px;
+    }
+
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 25px 30px;
+    }
+}
+
+@media (min-width: 900px) {
+    #projects {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #intro {
+        display: grid;
+        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+        column-gap: 30px;
+        text-align: left;
+    }
+
+    #intro > h1,
+    #intro > p {
+        grid-column: 1;
+    }
+
+    #intro > figure {
+        grid-column: 2;
+        grid-row: 1 / span 4;
+        margin: 0;
+        align-self: center;
+    }
+
+    #intro figcaption {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        padding: 35px;
+    }
+
+    #projects {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    #intro {
+        column-gap: 45px;
+    }
+}
+
