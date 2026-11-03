@@ -1,10 +1,10 @@
 /* 1. Five reusable CSS variables */
 :root {
-    --background: #a74fde;
+    --background: #e3c9f3;
     --surface: #ffffff;
     --text: #000000;
-    --accent: #e283ea;
-    --border: #e48f80;
+    --accent: #81058c;
+    --border: #81058c;
 }
 
 /* 2. Overall page */
