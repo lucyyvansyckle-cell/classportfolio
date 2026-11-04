@@ -312,3 +312,58 @@ nav a {
     }
 }
 
+#projects .project-featured {
+    grid-column: 1 / -1;
+    padding: clamp(1.25rem, 4vw, 2rem);
+    background: var(--surface, #fff);
+    border: 2px solid #e3d5ed;
+    border-radius: 1rem;
+}
+
+.project-label {
+    margin-block: 0 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.project-lead {
+    max-width: 60ch;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.case-study {
+    display: grid;
+    gap: 1rem;
+    margin-block: 1.5rem 0;
+}
+
+.case-study dt {
+    font-weight: 700;
+}
+
+.case-study dd {
+    margin: 0.25rem 0 0;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.project-tags li {
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    background: #f5edf8;
+    color: #302435;
+    font-size: 0.85rem;
+}
+
+@media (min-width: 56rem) {
+    .case-study {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
