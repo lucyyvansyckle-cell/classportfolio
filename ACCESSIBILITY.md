@@ -1,0 +1,3 @@
+/* The only issue with my profile at first was with the accessibility and how the 
+colors were not able to contrast aganist each other in the correct way. I changed the colors up 
+until my score was good. */
