@@ -430,3 +430,123 @@ nav a {
     padding-block: 1rem;
     border-top: 1px solid #cdb8d8;
 }
+
+/* Light theme */
+:root {
+    color-scheme: light;
+    --background: #e3c9f3;
+    --surface: #ffffff;
+    --text: #24182e;
+    --accent: #7045a5;
+    --border: #9567ae;
+    --header-background: #7045a5;
+    --header-text: #ffffff;
+    --footer-background: #eee0f5;
+    --tag-background: #f5edf8;
+}
+
+/* Dark theme */
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --background: #18121f;
+    --surface: #261d30;
+    --text: #f5edf9;
+    --accent: #d5b3ff;
+    --border: #9978b3;
+    --header-background: #30203f;
+    --header-text: #ffffff;
+    --footer-background: #21182b;
+    --tag-background: #3c2b4c;
+}
+
+/* Keep header text readable in either theme */
+header {
+    background-color: var(--header-background);
+    color: var(--header-text);
+}
+
+header > a {
+    color: var(--header-text);
+}
+
+/* Theme button matches the navigation */
+.theme-toggle {
+    padding: 10px 16px;
+    border: 2px solid var(--header-text);
+    border-radius: 999px;
+    background-color: transparent;
+    color: var(--header-text);
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.theme-toggle:hover {
+    background-color: var(--header-text);
+    color: var(--header-background);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 5px;
+}
+
+.theme-toggle:focus-visible,
+header > a:focus-visible {
+    outline-color: var(--header-text);
+}
+
+/* Replace fixed colors in existing components */
+#projects .project-featured {
+    background-color: var(--surface);
+    border-color: var(--border);
+}
+
+.project-tags li {
+    background-color: var(--tag-background);
+    color: var(--text);
+}
+
+.site-footer {
+    background-color: var(--footer-background);
+    color: var(--text);
+}
+
+.footer-bottom {
+    border-color: var(--border);
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Transition colors without changing ScrollReveal transforms */
+body,
+header,
+nav,
+section,
+.project,
+.project-tags li,
+.site-footer,
+.theme-toggle {
+    transition:
+        background-color 200ms ease,
+        color 200ms ease,
+        border-color 200ms ease;
+}
+
+/* Respect visitors who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+    body,
+    header,
+    nav,
+    section,
+    .project,
+    .project-tags li,
+    .site-footer,
+    .theme-toggle {
+        transition: none;
+    }
+}
